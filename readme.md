@@ -1,6 +1,6 @@
 ## Centmin Mod Nginx RPMs for CentOS 7.4+
 
-Experimental Nginx 1.13.9 RPM builds for [Centmin Mod LEMP stack](https://centminmod.com) using 123.09beta01 branch Nginx compilation routines.
+CentOS 7.4+ 64bit only experimental Nginx 1.13.9 RPM builds for [Centmin Mod LEMP stack](https://centminmod.com) using 123.09beta01 branch Nginx compilation routines.
 
 ## Centmin Mod Nginx RPM Dependencies:
 
