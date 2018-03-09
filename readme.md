@@ -4,11 +4,13 @@ CentOS 7.4+ 64bit only experimental Nginx 1.13.9 RPM builds for [Centmin Mod LEM
 
 ## Centmin Mod Nginx RPM Dependencies:
 
+Centmin Mod Nginx is built using alternative memory allocator, jemalloc instead of system default glibc malloc memory allocator.
+
 * jemalloc
 
 ```
 yum -y install epel-release
-yum -y install jemalloc
+yum -y install jemalloc jemalloc-devel
 yum -y localinstall cmm-ngx-1.13.9-1.el7.x86_64.rpm
 ```
 
