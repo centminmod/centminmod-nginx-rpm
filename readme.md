@@ -14,7 +14,7 @@ yum -y localinstall cmm-ngx-1.13.9-1.el7.x86_64.rpm
 
 ## Centmin Mod Nginx RPM Build Details
 
-Built using GCC 7.2.1 compiler persistent config file `/etc/centminmod/custom_config.inc` settings:
+Built using GCC 7.2.1 compiler with persistent config file `/etc/centminmod/custom_config.inc` settings:
 
 ```
 MARCH_TARGETNATIVE='n'
@@ -37,6 +37,12 @@ NGXDYNAMIC_SRCCACHE='y'
 NGXDYNAMIC_DEVELKIT='y'
 NGXDYNAMIC_REDISTWO='y'
 ```
+
+Nginx configuration
+
+
+> ./configure --with-ld-opt="-L/usr/local/lib -ljemalloc -Wl,-z,relro -Wl,-rpath,/usr/local/lib" --with-cc-opt="-I/usr/local/include -m64 -march=x86-64 -g -O3 -Wno-error=strict-aliasing -fstack-protector-strong -flto -fuse-ld=gold --param=ssp-buffer-size=4 -Wformat -Werror=format-security -Wimplicit-fallthrough=0 -fcode-hoisting  -Wp,-D_FORTIFY_SOURCE=2 -Wno-deprecated-declarations -gsplit-dwarf" --sbin-path=/usr/local/sbin/nginx --conf-path=/usr/local/nginx/conf/nginx.conf --with-compat --with-http_stub_status_module --with-http_secure_link_module --with-libatomic --with-http_gzip_static_module --add-dynamic-module=../ngx_brotli --with-http_sub_module --with-http_addition_module --with-http_image_filter_module=dynamic --with-http_geoip_module=dynamic --with-stream_geoip_module=dynamic --with-stream_realip_module --with-stream_ssl_preread_module --with-threads --with-stream=dynamic --with-stream_ssl_module --with-http_realip_module --add-dynamic-module=../ngx-fancyindex-0.4.2 --add-module=../ngx_cache_purge-2.4.2 --add-dynamic-module=../ngx_devel_kit-0.3.0 --add-dynamic-module=../set-misc-nginx-module-0.31 --add-dynamic-module=../echo-nginx-module-0.61 --add-dynamic-module=../redis2-nginx-module-0.14 --add-module=../ngx_http_redis-0.3.7 --add-module=../memc-nginx-module-0.18 --add-dynamic-module=../srcache-nginx-module-0.31 --add-dynamic-module=../headers-more-nginx-module-0.33 --with-pcre=../pcre-8.41 --with-pcre-jit --with-zlib=../zlib-cloudflare-1.3.0 --with-http_ssl_module --with-http_v2_module --with-http_v2_hpack_enc --with-openssl=../openssl-1.1.0g --with-openssl-opt='enable-ec_nistp_64_gcc_128'
+
 
 ```
 rpm -qpl --provides cmm-ngx-1.13.9-1.el7.x86_64.rpm
