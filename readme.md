@@ -48,8 +48,24 @@ Nginx configuration
 
 ```
 rpm -qpl --provides cmm-ngx-1.13.9-1.el7.x86_64.rpm
+cmm-ngx = 1.13.9-1.el7
 cmm-ngx(x86-64) = 1.13.9-1.el7
 /etc/init.d/nginx
+/home/nginx/domains/demodomain.com/backup
+/home/nginx/domains/demodomain.com/log/access.log
+/home/nginx/domains/demodomain.com/log/error.log
+/home/nginx/domains/demodomain.com/private
+/home/nginx/domains/demodomain.com/public/401.html
+/home/nginx/domains/demodomain.com/public/403.html
+/home/nginx/domains/demodomain.com/public/404.html
+/home/nginx/domains/demodomain.com/public/500.html
+/home/nginx/domains/demodomain.com/public/502.html
+/home/nginx/domains/demodomain.com/public/503.html
+/home/nginx/domains/demodomain.com/public/503.jpg
+/home/nginx/domains/demodomain.com/public/504.html
+/home/nginx/domains/demodomain.com/public/50x.html
+/home/nginx/domains/demodomain.com/public/index.html
+/home/nginx/domains/demodomain.com/public/maintenance.html
 /usr/bin/nginxconf
 /usr/bin/ngxreload
 /usr/bin/ngxrestart
